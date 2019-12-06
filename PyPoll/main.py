@@ -86,7 +86,7 @@ with open(output_path, 'w', newline='') as csvfile:
 # loop through candidates and print their percentage and total votes
     i = 0
     for i in range(num_candidates):
-        csvwriter.writerow([(str(candidates[i]) + ": " + str(percent_votes[i]) + "% (" + str(votes[i]) + ")")])
+        csvwriter.writerow([(str(candidates[i]) + ": " + str(format(percent_votes[i],'.3f')) + "% (" + str(votes[i]) + ")")])
 
     csvwriter.writerow(["-----------------------------"])
     csvwriter.writerow(["Winner: " + str(candidates[position])])
