@@ -74,8 +74,8 @@ with open(output_path, 'w', newline='') as textfile: #csvfile:
     textfile.write('Total Months: ' + str(len(months)) + '\n') # length of months list is number of months in file
     textfile.write('Total Profit: $' + str(sum(profit_loss)) + '\n') # sum the total net profit
     textfile.write('Average Change: $' + str(average(change)) + '\n') # average the list of change in profit for all months
-    textfile.write('Greatest Increase in Profits: ' + str(greatest_increase) + " $(" + str(greatest_profit_increase) + ")" + '\n') # write the greatest increase in profits
-    textfile.write('Greatest Decrease in Profits: ' + str(greatest_decrease) + " $(" +  str(greatest_profit_decrease) + ")" + '\n') # write the greatest decrease in profits
+    textfile.write('Greatest Increase in Profits: ' + str(greatest_increase) + " ($" + str(greatest_profit_increase) + ")" + '\n') # write the greatest increase in profits
+    textfile.write('Greatest Decrease in Profits: ' + str(greatest_decrease) + " ($" +  str(greatest_profit_decrease) + ")" + '\n') # write the greatest decrease in profits
         
     # print financial analysis to terminal
     print("Financial Analysis")
@@ -83,8 +83,8 @@ with open(output_path, 'w', newline='') as textfile: #csvfile:
     print("Total Months: " + str(len(months)))
     print("Total: $" + str(sum(profit_loss)))
     print("Average Change: $" + str(average(change)))
-    print("Greatest Increase in Profits: " + greatest_increase + " $(" + str(greatest_profit_increase) + ")")
-    print("Greatest Decrease in Profits: " + greatest_decrease + " $(" + str(greatest_profit_decrease) + ")")
+    print("Greatest Increase in Profits: " + greatest_increase + " ($" + str(greatest_profit_increase) + ")")
+    print("Greatest Decrease in Profits: " + greatest_decrease + " ($" + str(greatest_profit_decrease) + ")")
 
 # what the output should look like (from the readme file)
 #     Financial Analysis
