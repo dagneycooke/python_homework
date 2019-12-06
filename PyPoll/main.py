@@ -48,7 +48,7 @@ with open(csvpath, 'r') as csvfile:
 
     # calculate percent votes for each candidate
     for people in votes:
-        win_percent = float((people/total_votes)*100) # calculate win percentage
+        win_percent = (people/total_votes)*100 # calculate win percentage
         percent_votes.append(win_percent) # add win percentage to list of percentages
         if win_percent > highest_win: # keep track of the highest percentage
             highest_win = win_percent
