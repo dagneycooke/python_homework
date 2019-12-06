@@ -48,7 +48,7 @@ with open(csvpath, 'r') as csvfile:
 
     # calculate percent votes for each candidate
     for people in votes:
-        win_percent = round((people/total_votes)*100,3) # round percentage to two decimal places
+        win_percent = float((people/total_votes)*100) # calculate win percentage
         percent_votes.append(win_percent) # add win percentage to list of percentages
         if win_percent > highest_win: # keep track of the highest percentage
             highest_win = win_percent
@@ -63,7 +63,7 @@ print("-----------------------------")
 
 # loop through candidates and print their percentage and total votes
 for i in range(num_candidates):
-    print(str(candidates[i]) + ": " + str(percent_votes[i]) + "% (" + str(votes[i]) + ")")
+    print(str(candidates[i]) + ": " + str(format(percent_votes[i],'.3f')) + "% (" + str(votes[i]) + ")")
 print("-----------------------------")
 print("Winner: " + str(candidates[position]))
 print("-----------------------------")

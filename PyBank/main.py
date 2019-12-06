@@ -69,18 +69,6 @@ output_path = os.path.join("output.txt")
 # open path to output text file
 with open(output_path, 'w', newline='') as textfile: #csvfile:
 
-    # Initialize csv.writer
-    #csvwriter = csv.writer(csvfile, delimiter=' ',escapechar=' ',quoting=csv.QUOTE_NONE)
-    
-    # Write the first row (column headers)
-    # csvwriter.writerow(['Financial Analysis'])
-    # csvwriter.writerow(['-----------------'])
-    # csvwriter.writerow(['Total Months:', len(months)]) # length of months list is number of months in file
-    # csvwriter.writerow(['Total Profit:', sum(profit_loss)]) # sum the total net profit
-    # csvwriter.writerow(['Average Change:', average(change)]) # average the list of change in profit for all months
-    # csvwriter.writerow(['Greatest Increase in Profits:', greatest_increase, greatest_profit_increase]) # write the greatest increase in profits
-    # csvwriter.writerow(['Greatest Decrease in Profits:', greatest_decrease, greatest_profit_decrease]) # write the greatest decrease in profits
-
     textfile.write('Financial Analysis' + '\n')
     textfile.write('-----------------' + '\n')
     textfile.write('Total Months: ' + str(len(months)) + '\n') # length of months list is number of months in file
